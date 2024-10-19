@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blur Links Example</title>
+    <style>
+      /* Styling for the parent container */
+      .parent:has(.child:hover) .child:not(:hover) {
+        filter: blur(3px); /* Blur the non-hovered links */
+      }
+
+      /* Basic styling for the links */
+      .child {
+        display: inline-block;
+        margin: 10px;
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+        transition: filter 0.3s ease; /* Smooth transition */
+      }
+
+      /* Body styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Container to hold the links */
+      .parent {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <a href="#" class="child">Link 1</a>
+      <a href="#" class="child">Link 2</a>
+      <a href="#" class="child">Link 3</a>
+    </div>
+  </body>
+</html>
